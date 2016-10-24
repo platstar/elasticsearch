@@ -3,7 +3,7 @@ kopf.controller('GlobalController', ['$scope', '$location', '$sce', '$window',
   function($scope, $location, $sce, $window, AlertService, ElasticService,
            ExternalSettingsService, PageService) {
 
-    $scope.version = '2.0.1';
+    $scope.version = '2.1.2';
 
     $scope.modal = new ModalControls();
 
@@ -18,7 +18,7 @@ kopf.controller('GlobalController', ['$scope', '$location', '$sce', '$window',
             if (major != parseInt($scope.version.charAt(0))) {
               AlertService.warn(
                   'This version of kopf is not compatible with your ES version',
-                  'Upgrading to newest supported version is recommended'
+                  'Upgrading to newest supported version is recommeded'
               );
             }
           }
@@ -41,8 +41,7 @@ kopf.controller('GlobalController', ['$scope', '$location', '$sce', '$window',
         if ($location.host() !== '') { // not opening from fs
           var location = $scope.readParameter('location');
           var url = $location.absUrl();
-          if (isDefined(location) ||
-              isDefined(location = ExternalSettingsService.getElasticsearchHost())) {
+          if (isDefined(location)) {
             host = location;
           } else if (url.indexOf('/_plugin/kopf') > -1) {
             host = url.substring(0, url.indexOf('/_plugin/kopf'));

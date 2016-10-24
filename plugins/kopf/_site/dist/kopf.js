@@ -1222,7 +1222,7 @@ kopf.controller('GlobalController', ['$scope', '$location', '$sce', '$window',
   function($scope, $location, $sce, $window, AlertService, ElasticService,
            ExternalSettingsService, PageService) {
 
-    $scope.version = '2.0.1';
+    $scope.version = '2.1.2';
 
     $scope.modal = new ModalControls();
 
@@ -1237,7 +1237,7 @@ kopf.controller('GlobalController', ['$scope', '$location', '$sce', '$window',
             if (major != parseInt($scope.version.charAt(0))) {
               AlertService.warn(
                   'This version of kopf is not compatible with your ES version',
-                  'Upgrading to newest supported version is recommended'
+                  'Upgrading to newest supported version is recommeded'
               );
             }
           }
@@ -5319,7 +5319,7 @@ kopf.factory('ElasticService', ['$http', '$q', '$timeout', '$location',
         $http.get(host + '/_aliases', params),
         $http.get(host + '/_cluster/health', params),
         $http.get(host + '/_nodes/_all/os,jvm', params),
-        $http.get(host + '/', params),
+        $http.get(host, params),
       ]).then(
           function(responses) {
             try {
@@ -5772,6 +5772,7 @@ kopf.factory('PageService', ['ElasticService', 'DebugService', '$rootScope',
           context.globalCompositeOperation = 'source-in';
           context.fillStyle = color;
           context.fillRect(0, 0, 32, 32);
+          context.fill();
           this.link.type = 'image/x-icon';
           this.link.href = canvas.toDataURL();
         } catch (exception) {

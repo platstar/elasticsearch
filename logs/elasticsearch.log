@@ -1,197 +1,174 @@
-[2016-10-06 10:16:50,367][INFO ][node                     ] [Node.01] version[2.4.0], pid[116], build[ce9f0c7/2016-08-29T09:14:17Z]
-[2016-10-06 10:16:50,373][INFO ][node                     ] [Node.01] initializing ...
-[2016-10-06 10:16:52,492][INFO ][plugins                  ] [Node.01] modules [reindex, lang-expression, lang-groovy], plugins [bigdesk, elasticsearch-inquisitor, rtf, kopf, hq, gui, analysis-stconvert, analysis-ik, analysis-mmseg], sites [bigdesk, gui, hq, elasticsearch-inquisitor, kopf, rtf]
-[2016-10-06 10:16:52,667][INFO ][env                      ] [Node.01] using [1] data paths, mounts [[DATA (D:)]], net usable_space [217.2gb], net total_space [232.5gb], spins? [unknown], types [NTFS]
-[2016-10-06 10:16:52,668][INFO ][env                      ] [Node.01] heap size [910.5mb], compressed ordinary object pointers [true]
-[2016-10-06 10:16:55,128][INFO ][mmseg-analyzer           ] [Dict Loading] chars loaded time=31ms, line=12638, on file=chars.dic
-[2016-10-06 10:16:55,142][INFO ][mmseg-analyzer           ] [Dict Loading] words loaded time=1ms, line=16, on file=words-my.dic
-[2016-10-06 10:16:55,387][INFO ][mmseg-analyzer           ] [Dict Loading] words loaded time=214ms, line=157202, on file=words.dic
-[2016-10-06 10:16:55,404][INFO ][mmseg-analyzer           ] [Dict Loading] unit loaded time=1ms, line=22, on file=units.dic
-[2016-10-06 10:16:55,539][INFO ][ik-analyzer              ] try load config from D:\ELK\ES240A\config\analysis-ik\IKAnalyzer.cfg.xml
-[2016-10-06 10:16:55,541][INFO ][ik-analyzer              ] try load config from D:\ELK\ES240A\plugins\ik\config\IKAnalyzer.cfg.xml
-[2016-10-06 10:16:56,324][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
-[2016-10-06 10:16:56,339][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
-[2016-10-06 10:16:56,366][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\main.dic
-[2016-10-06 10:16:56,647][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\preposition.dic
-[2016-10-06 10:16:56,653][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\quantifier.dic
-[2016-10-06 10:16:56,657][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\suffix.dic
-[2016-10-06 10:16:56,662][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\surname.dic
-[2016-10-06 10:16:56,692][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
-[2016-10-06 10:16:56,732][INFO ][ik-analyzer              ] [Dict Loading] custom\zhTW\stopword.dic
-[2016-10-06 10:16:58,440][INFO ][node                     ] [Node.01] initialized
-[2016-10-06 10:16:58,440][INFO ][node                     ] [Node.01] starting ...
-[2016-10-06 10:16:58,892][INFO ][transport                ] [Node.01] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
-[2016-10-06 10:16:58,900][INFO ][discovery                ] [Node.01] elasticsearch/UelDhfVnRbOu9iu9yuxCTQ
-[2016-10-06 10:17:03,012][INFO ][cluster.service          ] [Node.01] new_master {Node.01}{UelDhfVnRbOu9iu9yuxCTQ}{127.0.0.1}{127.0.0.1:9300}{rack=node24001}, reason: zen-disco-join(elected_as_master, [0] joins received)
-[2016-10-06 10:17:03,118][INFO ][http                     ] [Node.01] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
-[2016-10-06 10:17:03,118][INFO ][node                     ] [Node.01] started
-[2016-10-06 10:17:07,887][INFO ][gateway                  ] [Node.01] recovered [10] indices into cluster_state
-[2016-10-06 10:17:20,018][INFO ][cluster.routing.allocation] [Node.01] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[product01][0], [product01][3], [product01][3], [product01][0]] ...]).
-[2016-10-06 10:17:34,171][INFO ][cluster.service          ] [Node.01] added {{Node.02}{vlXF9XiGQDyr_MJJ_kS93w}{127.0.0.1}{127.0.0.1:9301}{rack=node24002},}, reason: zen-disco-join(join from node[{Node.02}{vlXF9XiGQDyr_MJJ_kS93w}{127.0.0.1}{127.0.0.1:9301}{rack=node24002}])
-[2016-10-06 10:17:57,846][INFO ][cluster.routing.allocation] [Node.01] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[product01][4]] ...]).
-[2016-10-06 10:18:17,817][INFO ][cluster.metadata         ] [Node.01] [logstash] creating index, cause [api], templates [], shards [2]/[1], mappings []
-[2016-10-06 10:18:18,224][INFO ][cluster.routing.allocation] [Node.01] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[logstash][0]] ...]).
-[2016-10-06 10:18:19,047][INFO ][cluster.routing.allocation] [Node.01] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[logstash][0]] ...]).
-[2016-10-06 16:27:48,190][INFO ][cluster.metadata         ] [Node.01] [logstash] create_mapping [logs]
-[2016-10-06 16:33:28,855][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0xa1e44e75, /127.0.0.1:51445 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 09:25:42,948][INFO ][node                     ] [Node.04] version[2.4.1], pid[13592], build[c67dc32/2016-09-27T18:57:55Z]
+[2016-10-19 09:25:42,954][INFO ][node                     ] [Node.04] initializing ...
+[2016-10-19 09:25:44,723][INFO ][plugins                  ] [Node.04] modules [reindex, lang-expression, lang-groovy], plugins [bigdesk, elasticsearch-inquisitor, rtf, kopf, hq, gui, analysis-ik], sites [bigdesk, gui, hq, elasticsearch-inquisitor, kopf, rtf]
+[2016-10-19 09:25:44,789][INFO ][env                      ] [Node.04] using [1] data paths, mounts [[DATA (D:)]], net usable_space [216.8gb], net total_space [232.5gb], spins? [unknown], types [NTFS]
+[2016-10-19 09:25:44,795][INFO ][env                      ] [Node.04] heap size [990.7mb], compressed ordinary object pointers [true]
+[2016-10-19 09:25:48,484][INFO ][ik-analyzer              ] try load config from D:\ELK\ES241C\config\analysis-ik\IKAnalyzer.cfg.xml
+[2016-10-19 09:25:48,487][INFO ][ik-analyzer              ] try load config from D:\ELK\ES241C\plugins\elasticsearch-analysis-ik-1.10.1\config\IKAnalyzer.cfg.xml
+[2016-10-19 09:25:49,272][INFO ][ik-analyzer              ] [Dict Loading] custom\mydict.dic
+[2016-10-19 09:25:49,493][INFO ][ik-analyzer              ] [Dict Loading] custom\single_word_low_freq.dic
+[2016-10-19 09:25:49,594][INFO ][ik-analyzer              ] [Dict Loading] custom\ext_stopword.dic
+[2016-10-19 09:25:55,557][INFO ][node                     ] [Node.04] initialized
+[2016-10-19 09:25:55,558][INFO ][node                     ] [Node.04] starting ...
+[2016-10-19 09:25:56,276][INFO ][transport                ] [Node.04] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2016-10-19 09:25:56,288][INFO ][discovery                ] [Node.04] elasticsearch/jNAzwa27Tla6xWY5-sIgzg
+[2016-10-19 09:26:00,628][INFO ][cluster.service          ] [Node.04] new_master {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-10-19 09:26:00,822][INFO ][http                     ] [Node.04] publish_address {127.0.0.1:9400}, bound_addresses {127.0.0.1:9400}
+[2016-10-19 09:26:00,837][INFO ][node                     ] [Node.04] started
+[2016-10-19 09:26:01,781][INFO ][gateway                  ] [Node.04] recovered [6] indices into cluster_state
+[2016-10-19 09:26:11,582][INFO ][cluster.service          ] [Node.04] added {{Node.02}{8iFkLX_8SByTd40UOrr3JA}{127.0.0.1}{127.0.0.1:9301}{rack=node24002},}, reason: zen-disco-join(join from node[{Node.02}{8iFkLX_8SByTd40UOrr3JA}{127.0.0.1}{127.0.0.1:9301}{rack=node24002}])
+[2016-10-19 09:26:18,310][INFO ][cluster.service          ] [Node.04] added {{Node.01}{fs2lZ5-TSjGuEIp34XT1oA}{127.0.0.1}{127.0.0.1:9302}{rack=node24001},}, reason: zen-disco-join(join from node[{Node.01}{fs2lZ5-TSjGuEIp34XT1oA}{127.0.0.1}{127.0.0.1:9302}{rack=node24001}])
+[2016-10-19 09:26:33,048][INFO ][cluster.routing.allocation] [Node.04] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[ikmax][3]] ...]).
+[2016-10-19 09:54:18,231][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][0] on node {Node.02}{8iFkLX_8SByTd40UOrr3JA}{127.0.0.1}{127.0.0.1:9301}{rack=node24002} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][YES(shard is not allocated to same node or host)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][NO(target node version [2.4.0] is older than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 16:44:14,418][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0xd1e44408, /127.0.0.1:52199 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 09:54:36,443][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][0] on node {Node.02}{8iFkLX_8SByTd40UOrr3JA}{127.0.0.1}{127.0.0.1:9301}{rack=node24002} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][YES(shard is not allocated to same node or host)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][NO(target node version [2.4.0] is older than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 16:47:23,980][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0x72556ccf, /127.0.0.1:52234 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 09:56:12,174][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][0] on node {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][NO(shard cannot be allocated on same node [jNAzwa27Tla6xWY5-sIgzg] it already exists on)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][YES(target node version [2.4.1] is same or newer than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 16:50:59,718][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0x13331ce9, /127.0.0.1:52239 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 09:56:20,404][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][1] on node {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][NO(shard cannot be allocated on same node [jNAzwa27Tla6xWY5-sIgzg] it already exists on)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][YES(target node version [2.4.1] is same or newer than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 16:51:33,863][INFO ][cluster.metadata         ] [Node.01] [logstash] create_mapping [item]
-[2016-10-06 16:52:42,575][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0xf9c39815, /127.0.0.1:52253 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 10:02:50,496][DEBUG][action.admin.indices.create] [Node.04] [_settings] failed to create
+[_settings] InvalidIndexNameException[Invalid index name [_settings], must not start with '_']
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validateIndexName(MetaDataCreateIndexService.java:148)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.validate(MetaDataCreateIndexService.java:431)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.access$100(MetaDataCreateIndexService.java:95)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:190)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 16:54:12,108][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0x06a61b4f, /127.0.0.1:52263 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 10:03:00,852][DEBUG][action.admin.indices.mapping.put] [Node.04] failed to put mappings on indices [[ikmax]], type [_settings]
+InvalidTypeNameException[Document mapping type name can't start with '_']
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:291)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 17:11:10,891][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0xb68ba618, /127.0.0.1:52271 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 10:03:42,604][DEBUG][action.admin.indices.mapping.put] [Node.04] failed to put mappings on indices [[ikmax]], type [_settings]
+InvalidTypeNameException[Document mapping type name can't start with '_']
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:291)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 17:25:49,109][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0x4d39c935, /127.0.0.1:52430 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 10:03:42,605][DEBUG][action.index             ] [Node.04] failed to execute [index {[ikmax][_settings][AVfarg4b7tC1sZKUh_Fe], source[{
+    "index" : {
+        "number_of_replicas" : 1
+    }
+}]}] on [[ikmax][1]]
+InvalidTypeNameException[Document mapping type name can't start with '_']
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.applyRequest(MetaDataMappingService.java:291)
+	at org.elasticsearch.cluster.metadata.MetaDataMappingService$PutMappingExecutor.execute(MetaDataMappingService.java:230)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 17:43:57,200][INFO ][cluster.metadata         ] [Node.01] [logstash] update_mapping [item]
-[2016-10-06 18:03:30,460][WARN ][http.netty               ] [Node.01] Caught exception while handling client http traffic, closing connection [id: 0x0bac367c, /127.0.0.1:52755 => /127.0.0.1:9200]
-java.io.IOException: 遠端主機已強制關閉一個現存的連線。
-	at sun.nio.ch.SocketDispatcher.read0(Native Method)
-	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
-	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
-	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
-	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
-	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:64)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
-	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
-	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
-	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
-	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
-	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+[2016-10-19 10:10:52,785][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][1] on node {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][NO(shard cannot be allocated on same node [jNAzwa27Tla6xWY5-sIgzg] it already exists on)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][YES(target node version [2.4.1] is same or newer than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-10-06 18:10:42,808][INFO ][cluster.routing.allocation] [Node.01] Cluster health status changed from [GREEN] to [YELLOW] (reason: [{Node.02}{vlXF9XiGQDyr_MJJ_kS93w}{127.0.0.1}{127.0.0.1:9301}{rack=node24002} left]).
-[2016-10-06 18:10:42,808][INFO ][cluster.service          ] [Node.01] removed {{Node.02}{vlXF9XiGQDyr_MJJ_kS93w}{127.0.0.1}{127.0.0.1:9301}{rack=node24002},}, reason: zen-disco-node-left({Node.02}{vlXF9XiGQDyr_MJJ_kS93w}{127.0.0.1}{127.0.0.1:9301}{rack=node24002}), reason(left)
-[2016-10-06 18:10:42,808][INFO ][cluster.routing          ] [Node.01] delaying allocation for [22] unassigned shards, next check in [1m]
-[2016-10-06 18:10:45,313][INFO ][node                     ] [Node.01] stopping ...
-[2016-10-06 18:10:45,778][INFO ][node                     ] [Node.01] stopped
-[2016-10-06 18:10:45,778][INFO ][node                     ] [Node.01] closing ...
-[2016-10-06 18:10:45,815][INFO ][node                     ] [Node.01] closed
+[2016-10-19 10:11:56,346][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][1] on node {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][NO(shard cannot be allocated on same node [jNAzwa27Tla6xWY5-sIgzg] it already exists on)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][YES(target node version [2.4.1] is same or newer than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-19 10:12:24,569][DEBUG][action.admin.cluster.reroute] [Node.04] failed to perform [cluster_reroute (api)]
+java.lang.IllegalArgumentException: [allocate] allocation of [ikmax][0] on node {Node.04}{jNAzwa27Tla6xWY5-sIgzg}{127.0.0.1}{127.0.0.1:9300}{rack=node24011} is not allowed, reason: [YES(enough disk for shard on node, free: [216.8gb])][YES(node passes include/exclude/require filters)][YES(primary is already active)][NO(shard cannot be allocated on same node [jNAzwa27Tla6xWY5-sIgzg] it already exists on)][YES(no allocation awareness enabled)][YES(allocation disabling is ignored)][YES(total shard limit disabled: [index: -1, cluster: -1] <= 0)][YES(target node version [2.4.1] is same or newer than source node version [2.4.1])][YES(below shard recovery limit of [2])][YES(shard not primary or relocation disabled)][YES(allocation disabling is ignored)]
+	at org.elasticsearch.cluster.routing.allocation.command.AllocateAllocationCommand.execute(AllocateAllocationCommand.java:220)
+	at org.elasticsearch.cluster.routing.allocation.command.AllocationCommands.execute(AllocationCommands.java:116)
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:185)
+	at org.elasticsearch.action.admin.cluster.reroute.TransportClusterRerouteAction$1.execute(TransportClusterRerouteAction.java:94)
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45)
+	at org.elasticsearch.cluster.service.InternalClusterService.runTasksForExecutor(InternalClusterService.java:468)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:772)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:231)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:194)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-10-19 10:13:47,291][INFO ][node                     ] [Node.04] stopping ...
+[2016-10-19 10:13:47,502][INFO ][node                     ] [Node.04] stopped
+[2016-10-19 10:13:47,502][INFO ][node                     ] [Node.04] closing ...
+[2016-10-19 10:13:47,514][INFO ][node                     ] [Node.04] closed

@@ -51,15 +51,16 @@ set JAVA_OPTS=%JAVA_OPTS% -Djava.net.preferIPv4Stack=true
 )
 
 REM Add gc options. ES_GC_OPTS is unsupported, for internal testing
+SETLOCAL EnableDelayedExpansion
 if "%ES_GC_OPTS%" == "" (
-set ES_GC_OPTS=%ES_GC_OPTS% -XX:+UseParNewGC
-set ES_GC_OPTS=%ES_GC_OPTS% -XX:+UseConcMarkSweepGC
-set ES_GC_OPTS=%ES_GC_OPTS% -XX:CMSInitiatingOccupancyFraction=75
-set ES_GC_OPTS=%ES_GC_OPTS% -XX:+UseCMSInitiatingOccupancyOnly
+set ES_GC_OPTS=!ES_GC_OPTS! -XX:+UseParNewGC
+set ES_GC_OPTS=!ES_GC_OPTS! -XX:+UseConcMarkSweepGC
+set ES_GC_OPTS=!ES_GC_OPTS! -XX:CMSInitiatingOccupancyFraction=75
+set ES_GC_OPTS=!ES_GC_OPTS! -XX:+UseCMSInitiatingOccupancyOnly
 REM When running under Java 7
-REM JAVA_OPTS=%JAVA_OPTS% -XX:+UseCondCardMark
+REM JAVA_OPTS=!JAVA_OPTS! -XX:+UseCondCardMark
 )
-set JAVA_OPTS=%JAVA_OPTS%%ES_GC_OPTS%
+ENDLOCAL & set JAVA_OPTS=%JAVA_OPTS%%ES_GC_OPTS%
 
 if "%ES_GC_LOG_FILE%" == "" goto nogclog
 
@@ -93,7 +94,7 @@ set JAVA_OPTS=%JAVA_OPTS% -Djna.nosys=true
 
 REM check in case a user was using this mechanism
 if "%ES_CLASSPATH%" == "" (
-set ES_CLASSPATH=!ES_HOME!/lib/elasticsearch-2.4.0.jar;!ES_HOME!/lib/*
+set ES_CLASSPATH=!ES_HOME!/lib/elasticsearch-2.4.1.jar;!ES_HOME!/lib/*
 ) else (
 ECHO Error: Don't modify the classpath with ES_CLASSPATH, Best is to add 1>&2
 ECHO additional elements via the plugin mechanism, or if code must really be 1>&2

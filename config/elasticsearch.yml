@@ -93,10 +93,20 @@
 #
 # action.destructive_requires_name: true
 network.host: 127.0.0.1
+cluster.name: elasticsearch
+
 http.port: 9200
-http.enable: false
-node.name: Node.01
-node.rack: node24001
+http.enable: true
+
+node.name: node.9200.241
+node.rack: node.9200.241
+node.master: false
+node.data: false
+
+path.data: /ELK/ES.FILE/ES.9200/Data
+path.logs: /ELK/ES.FILE/ES.9200/Logs
+path.plugins: /ELK/ES.Plugins/client.master
+
 index:
   analysis:
     analyzer:
@@ -124,6 +134,29 @@ index:
       #  - cut_letter_digit
       #  tokenizer: mmseg_maxword  
 
+      ##stconvert
+      stconvert:
+        alias: st_analyzer
+        type: stconvert
+      s2t_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: s2t
+      t2s_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: t2s
+      s2t_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: s2t
+      t2s_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: t2s
+
     tokenizer:
       #ik
       ik_smart:
@@ -143,4 +176,43 @@ index:
       #    type: mmseg
       #    seg_type: "simple"
 
-      
+      ## stconvert
+      s2t_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: s2t
+      t2s_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: t2s
+      s2t_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: s2t
+      t2s_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: t2s
+
+    filter:
+      ##stconvert
+      s2t_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: s2t
+      t2s_convert:
+        type: stconvert
+        delimiter: ","
+        convert_type: t2s
+      s2t_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: s2t
+      t2s_keep_both_convert:
+        type: stconvert
+        delimiter: ","
+        keep_both: 'true'
+        convert_type: t2s        
