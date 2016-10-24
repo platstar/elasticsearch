@@ -1,2 +1,3 @@
-# elasticsearch Ready to Run
-# for 2.4.0
+# Elasticsearch Ready to Run
+
+version : 2.4.1
